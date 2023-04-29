@@ -22,7 +22,7 @@
         border-radius: 7px;
         margin-right: 5px;
       }
-      button {
+      .button__submit {
         background-color: #bb2e2e;
         color: white;
         border: 2px solid #bb2e2e;
@@ -32,8 +32,8 @@
         margin-right: 5px;
         transition: all 0.3s ease-in-out;
       }
-      button:hover,
-      button:focus {
+      .button__submit:hover,
+      .button__submit:focus {
         background-color: #0b2c52;
         color: white;
         border-color: #0b2c52;
@@ -54,9 +54,7 @@
 
       .photo-card {
         display: inline-block;
-
         margin: 10px;
-        /* width: calc(25% - 20px); */
         border: 1px solid #ddd;
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
         border-radius: 5px;
@@ -81,7 +79,10 @@
       .photo-card .info-item {
         margin: 3px;
         font-size: 10px;
-        color: #888;
+        color: black;
+      }
+      .is-hidden {
+        display: none;
       }
     </style>
   </head>
@@ -94,12 +95,13 @@
           autocomplete="off"
           placeholder="Search images..."
         />
-        <button type="submit">Search</button>
+        <button class="button__submit" type="submit">Search</button>
       </form>
     </header>
     <div class="gallery">
       <!-- Картки зображень -->
     </div>
+    <button type="button" class="load-more is-hidden">Load more</button>
     <script type="module" src="./index.js"></script>
   </body>
 </html>
